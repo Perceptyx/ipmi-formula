@@ -1,0 +1,8 @@
+name: ipmi
+os: Ubuntu
+os_family: Debian
+version: 201710
+release: 1
+minimum_version: 2016.11.6
+summary: Formula for installing IPMI package and kernel module
+description: Formula for installing IPMI package and kernel module

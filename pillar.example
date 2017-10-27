@@ -1,0 +1,6 @@
+ipmi:
+
+# Override any names defined in map.jinja
+#  lookup:
+#    ipmitool_pkg: ipmitool
+#    ipmi_modules: ['ipmi_devintf', 'ipmi_si', 'ipmi_ssif']

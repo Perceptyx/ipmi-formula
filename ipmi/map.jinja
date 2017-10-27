@@ -1,0 +1,18 @@
+{% set ipmi = salt['grains.filter_by']({
+  'default': {
+    'ipmitool_pkg': 'ipmitool',
+    'ipmi_modules': ['ipmi_devintf', 'ipmi_si', 'ipmi_ssif']
+  },
+  'FreeBSD': {
+    'ipmitool_pkg': 'ipmitool',
+    'ipmi_modules': ['ipmi']
+  },
+  'Debian': {
+    'ipmitool_pkg': 'ipmitool',
+    'ipmi_modules': ['ipmi_devintf', 'ipmi_si']
+  },
+  'RedHat': {
+    'ipmitool_pkg': 'ipmitool',
+    'ipmi_modules': ['ipmi_devintf', 'ipmi_si', 'ipmi_ssif']
+  },
+}, grain='os_family', merge=salt['pillar.get']('ipmi:lookup'), default='default') %}
