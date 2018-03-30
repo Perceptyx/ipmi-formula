@@ -6,5 +6,6 @@
 kernel_module-{{ module }}:
   kmod.present:
     - name: {{ module }}
+    - persist: True
 {% endfor %}
 {% endif %}
